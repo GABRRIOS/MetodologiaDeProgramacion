@@ -8,13 +8,13 @@ namespace MetodologiaDeProgramacion.Interfaces
 {
     internal interface Coleccionable
     {
-        int cuatos();
+        int cuantos();
 
         Comparable minimo();
 
         Comparable maximo();
 
-        void agergar(Comparable c);
+        void agregar(Comparable c);
 
         bool contiene(Comparable c);
     }

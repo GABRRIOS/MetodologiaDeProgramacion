@@ -16,7 +16,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             cola = new List<Comparable>();
         }
 
-        public void agergar(Comparable c)
+        public void agregar(Comparable c)
         {
             cola.Add(c);
         }
@@ -26,19 +26,28 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             return cola.Contains(c);
         }
 
-        public int cuatos()
+        public int cuantos()
         {
             return cola.Count();
         }
 
         public Comparable maximo()
         {
-            throw new NotImplementedException();
+            Comparable comparable = cola[0];
+            foreach (Comparable c in cola) {
+                if(c.sosMayor(comparable)) comparable = c;
+            }
+            return comparable;
         }
 
         public Comparable minimo()
         {
-            throw new NotImplementedException();
+            Comparable comparable = cola[0];
+            foreach (Comparable c in cola)
+            {
+                if (c.sosMenor(comparable)) comparable = c;
+            }
+            return comparable;
         }
     }
 }
