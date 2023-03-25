@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Pila
+    internal class Pila : Coleccionable
     {
         List<Comparable> pila;
 
@@ -16,7 +16,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             pila = new List<Comparable>();
         }
 
-        public void agergar(Comparable c)
+        public void agregar(Comparable c)
         {
             pila.Add(c);
         }
@@ -26,19 +26,30 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             return pila.Contains(c);
         }
 
-        public int cuatos()
+        public int cuantos()
         {
             return pila.Count();
         }
 
         public Comparable maximo()
         {
-            throw new NotImplementedException();
+            Comparable comparable = pila[0];
+            foreach (Comparable c in pila)
+            {
+                if (c.sosMayor(comparable)) comparable = c;
+            }
+            return comparable;
         }
 
         public Comparable minimo()
         {
-            throw new NotImplementedException();
+
+            Comparable comparable = pila[0];
+            foreach (Comparable c in pila)
+            {
+                if (c.sosMenor(comparable)) comparable = c;
+            }
+            return comparable;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
@@ -34,6 +35,11 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public bool sosMenor(Comparable c)
         {
             return valor < ((Numero)c).getValor();
+        }
+
+        public override string ToString()
+        {
+            return "Numero: " + valor;
         }
     }
 }

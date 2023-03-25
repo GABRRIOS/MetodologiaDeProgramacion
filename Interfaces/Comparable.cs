@@ -13,5 +13,7 @@ namespace MetodologiaDeProgramacion.Interfaces
         bool sosMenor(Comparable c);
 
         bool sosMayor(Comparable c);
+
+        string ToString();
     }
 }
