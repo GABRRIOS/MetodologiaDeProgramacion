@@ -25,6 +25,11 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return promedio;
         }
 
+        public int getLegajo()
+        {
+            return legajo;
+        }
+
         public override bool sosIgual(Comparable c)
         {
             if (promedio.Equals(((Alumno)c).getPromedio())) return true;
