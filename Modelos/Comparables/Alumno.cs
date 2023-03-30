@@ -1,4 +1,5 @@
-﻿using MetodologiaDeProgramacion.Interfaces;
+﻿using MetodologiaDeProgramacion.Estrategias;
+using MetodologiaDeProgramacion.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,13 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         int legajo;
         int promedio;
+        EstrategiaDeComparacion estrategia;
 
         public Alumno(string nombre, int dni, int legajo, int promedio) : base(nombre, dni)
         {
             this.legajo = legajo;
             this.promedio = promedio;
+            estrategia = new EstrategiaPorDni();
         }
 
         public int getPromedio()
@@ -30,22 +33,24 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return legajo;
         }
 
+        public void setEstrategia(EstrategiaDeComparacion estrategia)
+        {
+            this.estrategia = estrategia;
+        }
+
         public override bool sosIgual(Comparable c)
         {
-            if (promedio.Equals(((Alumno)c).getPromedio())) return true;
-            return false;
+            return estrategia.sosIgual(this, c);
         }
 
         public override bool sosMayor(Comparable c)
         {
-            if (promedio > ((Alumno)c).getPromedio()) return true;
-            return false;
+            return estrategia.sosMayor(this, c);
         }
 
         public override bool sosMenor(Comparable c)
         {
-            if (promedio < ((Alumno)c).getPromedio()) return true;
-            return false;
+            return estrategia.sosMenor(this, c);
         }
 
         public override string ToString()
