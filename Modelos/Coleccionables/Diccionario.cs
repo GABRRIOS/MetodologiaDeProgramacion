@@ -29,7 +29,11 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            throw new NotImplementedException();
+            foreach (ClaveValor e in this.diccionario)
+            {
+                if (c.sosIgual(e.Clave)) return true;
+            }
+            return false;
         }
         public object valorDe(Comparable c)
         {

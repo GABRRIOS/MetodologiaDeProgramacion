@@ -24,11 +24,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            foreach (Comparable e in this.conjunto)
-            {
-                if (c.sosIgual(e)) return true;
-            }
-            return false;
+            return conjunto.Contains(c);
         }
 
         public int cuantos()
