@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Interfaces
 {
-    internal interface Coleccionable
+    internal interface Coleccionable : Iterador
     {
         int cuantos();
 

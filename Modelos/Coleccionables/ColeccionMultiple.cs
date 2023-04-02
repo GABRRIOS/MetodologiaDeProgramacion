@@ -19,6 +19,11 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             this.c = c;
         }
 
+        public Comparable actual()
+        {
+            throw new NotImplementedException();
+        }
+
         public void agregar(Comparable c)
         {
         }
@@ -31,6 +36,11 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         public int cuantos()
         {
             return p.cuantos() + c.cuantos();
+        }
+
+        public bool fin()
+        {
+            throw new NotImplementedException();
         }
 
         public Comparable maximo()
@@ -47,6 +57,16 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             Comparable cMin = c.minimo();
             if (pMin.sosMenor(cMin)) return pMin;
             return cMin;
+        }
+
+        public void primero()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void siguiente()
+        {
+            throw new NotImplementedException();
         }
     }
 }

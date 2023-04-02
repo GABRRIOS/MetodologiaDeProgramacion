@@ -10,10 +10,17 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
     internal class Cola : Coleccionable
     {
         List<Comparable> cola;
+        int paginaActual;
 
         public Cola()
         {
             cola = new List<Comparable>();
+            paginaActual = 0;
+        }
+
+        public Comparable actual()
+        {
+            return cola[paginaActual];
         }
 
         public void agregar(Comparable c)
@@ -23,12 +30,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            return cola.Contains(c);
+            foreach (Comparable com in cola)
+            {
+                if (c.sosIgual(com)) return true;
+            }
+            return false;
         }
 
         public int cuantos()
         {
             return cola.Count();
+        }
+
+        public bool fin()
+        {
+            return paginaActual >= cola.Count();
         }
 
         public Comparable maximo()
@@ -48,6 +64,16 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
                 if (c.sosMenor(comparable)) comparable = c;
             }
             return comparable;
+        }
+
+        public void primero()
+        {
+            this.paginaActual = 0;
+        }
+
+        public void siguiente()
+        {
+            this.paginaActual = this.paginaActual + 1;
         }
     }
 }

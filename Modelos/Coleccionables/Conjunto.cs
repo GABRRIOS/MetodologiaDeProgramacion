@@ -11,10 +11,17 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
     {
 
         List<Comparable> conjunto;
+        int paginaActual;
 
         public Conjunto()
         {
             conjunto = new List<Comparable>();
+            paginaActual = 0;
+        }
+
+        public Comparable actual()
+        {
+            return conjunto[paginaActual];
         }
 
         public void agregar(Comparable c)
@@ -24,7 +31,11 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            return conjunto.Contains(c);
+            foreach (Comparable con in conjunto)
+            {
+                if (c.sosIgual(con)) return true;
+            }
+            return false;
         }
 
         public int cuantos()
@@ -32,14 +43,39 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             return conjunto.Count;
         }
 
+        public bool fin()
+        {
+            return paginaActual >= conjunto.Count();
+        }
+
         public Comparable maximo()
         {
-            throw new NotImplementedException();
+            Comparable comparable = conjunto[0];
+            foreach (Comparable c in conjunto)
+            {
+                if (c.sosMayor(comparable)) comparable = c;
+            }
+            return comparable;
         }
 
         public Comparable minimo()
         {
-            throw new NotImplementedException();
+            Comparable comparable = conjunto[0];
+            foreach (Comparable c in conjunto)
+            {
+                if (c.sosMenor(comparable)) comparable = c;
+            }
+            return comparable;
+        }
+
+        public void primero()
+        {
+            this.paginaActual = 0;
+        }
+
+        public void siguiente()
+        {
+            this.paginaActual = this.paginaActual + 1;
         }
     }
 }
