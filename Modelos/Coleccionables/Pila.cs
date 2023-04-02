@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,10 +11,17 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
     internal class Pila : Coleccionable
     {
         List<Comparable> pila;
+        int paginaActual;
 
         public Pila()
         {
             pila = new List<Comparable>();
+            paginaActual = 0;
+        }
+
+        public Comparable actual()
+        {
+            return pila[paginaActual];  
         }
 
         public void agregar(Comparable c)
@@ -23,12 +31,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            return pila.Contains(c);
+            foreach (Comparable com in pila)
+            {
+                if (c.sosIgual(com)) return true;
+            }
+            return false;
         }
 
         public int cuantos()
         {
             return pila.Count();
+        }
+
+        public bool fin()
+        {
+            return paginaActual >= pila.Count();
         }
 
         public Comparable maximo()
@@ -50,6 +67,16 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
                 if (c.sosMenor(comparable)) comparable = c;
             }
             return comparable;
+        }
+
+        public void primero()
+        {
+            this.paginaActual = 0;
+        }
+
+        public void siguiente()
+        {
+            this.paginaActual = this.paginaActual + 1;
         }
     }
 }

@@ -77,5 +77,25 @@ namespace MetodologiaDeProgramacion.Utilidades
                 c.agregar(comparable);
             }   
         }
+
+        static public void imprimirElementos(Coleccionable c)
+        {
+            c.primero();
+            while (!c.fin())
+            {
+                imprimir(c.actual().ToString());
+                c.siguiente();
+            }
+        }
+
+        static public void cambiarEstrategia(Coleccionable coleccionable, EstrategiaDeComparacion estrategia)
+        {
+            coleccionable.primero();
+            while (!coleccionable.fin())
+            {
+                ((Alumno)coleccionable.actual()).setEstrategia(estrategia);
+                coleccionable.siguiente();
+            }
+        }
     }
 }
