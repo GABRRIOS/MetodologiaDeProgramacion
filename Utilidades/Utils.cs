@@ -1,5 +1,7 @@
-﻿using MetodologiaDeProgramacion.Interfaces;
+﻿using MetodologiaDeProgramacion.FarbicaDeModelos;
+using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos.Comparables;
+using MetodologiaDeProgramacion.ModelosAbstractos;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,13 +16,11 @@ namespace MetodologiaDeProgramacion.Utilidades
 {
     static class Utils
     {
-        public static void llenar(Coleccionable c)
+        public static void llenar(Coleccionable c, int opcion)
         {
             for (int x = 0; x < 20; x++)
             {
-                Random rnd = new Random();
-                Comparable comparable = new Numero((rnd.Next(0, 99)));
-                c.agregar(comparable);
+                c.agregar(FabricaDeModelosComparables.crearAleatorio(opcion));
             }         
         }
 
@@ -29,7 +29,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             Console.WriteLine(value);
         }
 
-        public static void informar(Coleccionable c)
+        public static void informar(Coleccionable c, int opcion)
         {
             Comparable max = c.maximo();
             Comparable min = c.minimo();
@@ -37,7 +37,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             imprimir(max.ToString());
             imprimir(min.ToString());
             if (!(max.GetType().Equals(typeof(Numero)))) return;
-            Comparable comparable = new Numero(Convert.ToInt32(Console.ReadLine()));
+            Comparable comparable = FabricaDeModelosComparables.crearPorTeclado(opcion);
             if (c.contiene(comparable)) imprimir("El elemento leído está en la colección");
             else imprimir("“El elemento leído no está en la colección");
         }
