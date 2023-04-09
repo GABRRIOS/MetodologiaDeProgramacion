@@ -97,5 +97,14 @@ namespace MetodologiaDeProgramacion.Utilidades
                 coleccionable.siguiente();
             }
         }
+
+        public static void jornadaDeVentas(Coleccionable c)
+        {
+            for (int x = 0; x < 20; x++)
+            {
+                double monto = GeneradorDeDatosAleatorios.numeroAleatorio(7000);
+                ((Vendedor)c).venta(monto);
+            }
+        }
     }
 }

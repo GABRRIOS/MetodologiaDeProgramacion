@@ -37,7 +37,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return Bonus < ((Vendedor)c).Bonus;
         }
 
-        public void venta(decimal monto)
+        public void venta(double monto)
         {
             Console.WriteLine(monto);
         }
