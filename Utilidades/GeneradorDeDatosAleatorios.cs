@@ -17,7 +17,7 @@ namespace MetodologiaDeProgramacion.Utilidades
         public static string stringAleatorio(int cant)
         {
             Random rnd = new Random();
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             return new string(Enumerable.Repeat(chars, cant)
                 .Select(s => s[rnd.Next(s.Length)]).ToArray());
         }

@@ -36,7 +36,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             imprimir(c.cuantos().ToString());
             imprimir(max.ToString());
             imprimir(min.ToString());
-            if (!(max.GetType().Equals(typeof(Numero)))) return;
+            if ((max.GetType().Equals(typeof(Persona)))) return;
             Comparable comparable = FabricaDeModelosComparables.crearPorTeclado(opcion);
             if (c.contiene(comparable)) imprimir("El elemento leído está en la colección");
             else imprimir("“El elemento leído no está en la colección");

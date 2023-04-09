@@ -36,10 +36,10 @@ namespace MetodologiaDeProgramacion
                     Utils.informar(coleccionMultiple, 1);
                     break;
                 case 4:
-                    Utils.llenarAlumnos(pila);
-                    Utils.llenarAlumnos(cola);
-                    Utils.llenarAlumnos(conjunto);
-                    Utils.llenarAlumnos(diccionario);
+                    Utils.llenar(pila, 1);
+                    Utils.llenar(cola, 1);
+                    Utils.llenar(conjunto, 1);
+                    Utils.llenar(diccionario, 1);
                     Utils.imprimirElementos(pila);
                     Utils.imprimirElementos(cola);
                     Utils.imprimirElementos(conjunto);
