@@ -1,6 +1,5 @@
 ﻿using MetodologiaDeProgramacion.FarbicaDeModelos;
 using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -24,8 +23,7 @@ namespace MetodologiaDeProgramacion.ModelosAbstractos
             else if (valor == ALUMNO) fabricaDeComparables = new FabricaDeAlumnos();
             else if (valor == VENDEDOR) fabricaDeComparables = new FabricaDeVendedores();
             else fabricaDeComparables = new FabricaDeNumeros();
-            Comparable v = fabricaDeComparables.crearAleatorio();
-            return v;
+            return fabricaDeComparables.crearAleatorio();
         }
 
         static public Comparable crearPorTeclado(int valor)

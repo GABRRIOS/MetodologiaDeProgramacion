@@ -33,7 +33,6 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         {
             if (!contiene(c))
             {
-                Console.WriteLine(c.ToString());
                 conjunto.Add(c);
             }
                 
