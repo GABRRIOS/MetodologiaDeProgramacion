@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
-    internal class Vendedor : Persona
+    internal class Vendedor : Persona, Observador
     {
         private double sueldoBasico;
         private double bonus;
@@ -47,9 +47,14 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             bonus = bonus + 0.1;
         }
 
+        public void actualizar(Observado observado)
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             return "Persona: " + getNombre() + " DNI: " + getDni() + " Sueldo Basico: " + SueldoBasico + " Bonus: " + Bonus;
-        }
+        }  
     }
 }
