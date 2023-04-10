@@ -8,6 +8,6 @@ namespace MetodologiaDeProgramacion.Interfaces
 {
     internal interface Observador
     {
-        void actualizar(Observado observado);
+        void actualizar(double monto, Observado observado);
     }
 }

@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Modelos.Comparables;
 
 namespace MetodologiaDeProgramacion
 {
@@ -65,9 +67,14 @@ namespace MetodologiaDeProgramacion
                     Utils.informar(pila, 1);
                     break;
                 case 6:
-                    Utils.llenar(conjunto, 2);
+                    Utils.llenar(cola, 2);
                     Gerente g = new Gerente();
-                    Utils.jornadaDeVentas(conjunto);
+                    while (!cola.fin())
+                    {
+                        ((Vendedor)cola.actual()).agregarObservador(g);
+                        cola.siguiente();
+                    }
+                    Utils.jornadaDeVentas(cola);
                     g.cerrar();
                     break;
                 default:

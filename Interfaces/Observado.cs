@@ -9,7 +9,6 @@ namespace MetodologiaDeProgramacion.Interfaces
     internal interface Observado
     {
         void agregarObservador(Observador o);
-        void quitarObservador(Observador o);
-        void notificar();
+        void notificar(double monto);
     }
 }

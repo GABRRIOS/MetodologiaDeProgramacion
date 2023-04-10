@@ -10,38 +10,24 @@ using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos
 {
-    internal class Gerente : Observado
+    internal class Gerente : Observador
     {      
         Conjunto mejores;
-        List<Observador> observadores;
 
         public Gerente()
         {
             this.mejores = new Conjunto();
-            this.observadores = new List<Observador>();
         }
 
-        public void agregarObservador(Observador o)
+        public void actualizar(double monto, Observado observado)
         {
-            if (!observadores.Contains(o)) observadores.Add(o);
+            venta(monto, (Vendedor)observado);
         }
 
         public void cerrar()
         {
+            Console.WriteLine("los mejores vendedores son:");
             Utils.imprimirElementos(mejores);
-        }
-
-        public void notificar()
-        {
-            foreach(Observador o in observadores)
-            {
-                o.actualizar(this);
-            }
-        }
-
-        public void quitarObservador(Observador o)
-        {
-           observadores.Remove(o);
         }
 
         public void venta(double monto, Vendedor vendedor)

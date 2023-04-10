@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
-    internal class Vendedor : Persona, Observador
+    internal class Vendedor : Persona, Observado
     {
         private double sueldoBasico;
         private double bonus;
+        Observador gerente;
 
         public Vendedor(string nombre, int dni, double sueldoBasico) : base(nombre, dni)
         {
             this.sueldoBasico = sueldoBasico;
             this.bonus = 1;
+            gerente = new Gerente();
         }
 
         public double SueldoBasico { get => sueldoBasico; set => sueldoBasico = value; }
@@ -39,7 +41,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         public void venta(double monto)
         {
-            Console.WriteLine(monto);
+            notificar(monto);
         }
 
         public void aumentarBonus()
@@ -47,14 +49,19 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             bonus = bonus + 0.1;
         }
 
-        public void actualizar(Observado observado)
+        public void agregarObservador(Observador o)
         {
-            throw new NotImplementedException();
+            this.gerente = o;
+        }
+
+        public void notificar(double monto)
+        {
+            gerente.actualizar(monto, this);
         }
 
         public override string ToString()
         {
             return "Persona: " + getNombre() + " DNI: " + getDni() + " Sueldo Basico: " + SueldoBasico + " Bonus: " + Bonus;
-        }  
+        }     
     }
 }

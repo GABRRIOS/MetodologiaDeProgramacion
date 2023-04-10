@@ -19,6 +19,11 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             paginaActual = 0;
         }
 
+        public List<Comparable> getConjunto()
+        {
+            return this.conjunto;
+        }
+
         public Comparable actual()
         {
             return conjunto[paginaActual];
@@ -26,7 +31,12 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public void agregar(Comparable c)
         {
-            if (!contiene(c)) conjunto.Add(c);
+            if (!contiene(c))
+            {
+                Console.WriteLine(c.ToString());
+                conjunto.Add(c);
+            }
+                
         }
 
         public bool contiene(Comparable c)
