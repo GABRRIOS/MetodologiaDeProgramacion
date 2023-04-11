@@ -14,7 +14,7 @@ namespace MetodologiaDeProgramacion.FarbicaDeModelos
         public Comparable crearAleatorio()
         {         
             var nombre = GeneradorDeDatosAleatorios.stringAleatorio(6);
-            int dni = GeneradorDeDatosAleatorios.numeroAleatorio(99999999);
+            int dni = GeneradorDeDatosAleatorios.numeroAleatorio(40999999);
             double sueldoBasico = GeneradorDeDatosAleatorios.numeroAleatorio(99999);
             return new Vendedor(nombre, dni, sueldoBasico);
         }

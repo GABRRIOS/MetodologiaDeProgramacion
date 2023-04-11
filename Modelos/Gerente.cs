@@ -12,11 +12,11 @@ namespace MetodologiaDeProgramacion.Modelos
 {
     internal class Gerente : Observador
     {      
-        Conjunto mejores;
+        Coleccionable mejores;
 
         public Gerente()
         {
-            this.mejores = new Conjunto();
+            this.mejores = new Cola();
         }
 
         public void actualizar(double monto, Observado observado)
@@ -26,14 +26,20 @@ namespace MetodologiaDeProgramacion.Modelos
 
         public void cerrar()
         {
-            Console.WriteLine("los mejores vendedores son:");
+            Console.WriteLine("los mejores vendedores son: ");
             Utils.imprimirElementos(mejores);
         }
 
         public void venta(double monto, Vendedor vendedor)
         {
-            if (monto > 5000) mejores.agregar(vendedor);
-            else vendedor.aumentarBonus();
+            if (!mejores.contiene(vendedor))
+            {
+                if (monto > 5000)
+                {
+                    mejores.agregar(vendedor);
+                }
+                else vendedor.aumentarBonus();
+            }           
         }
     }
 }

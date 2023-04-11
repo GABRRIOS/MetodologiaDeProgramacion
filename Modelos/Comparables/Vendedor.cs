@@ -24,11 +24,6 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public double SueldoBasico { get => sueldoBasico; set => sueldoBasico = value; }
         public double Bonus { get => bonus; set => bonus = value; } 
 
-        public override bool sosIgual(Comparable c)
-        {
-            return Bonus == ((Vendedor)c).Bonus;
-        }
-
         public override bool sosMenor(Comparable c)
         {
             return Bonus > ((Vendedor)c).Bonus;
@@ -46,7 +41,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         public void aumentarBonus()
         {
-            bonus = bonus + 0.1;
+            this.bonus += 0.1;
         }
 
         public void agregarObservador(Observador o)
@@ -61,7 +56,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         public override string ToString()
         {
-            return "Persona: " + getNombre() + " DNI: " + getDni() + " Sueldo Basico: " + SueldoBasico + " Bonus: " + Bonus;
+            return "Nombre: " + getNombre() + " DNI: " + getDni() + " Sueldo Basico: " + SueldoBasico + " Bonus: " + String.Format("{0:00.0}", bonus);
         }     
     }
 }
