@@ -1,5 +1,6 @@
 ﻿using MetodologiaDeProgramacion.FarbicaDeModelos;
 using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 using System;
@@ -21,7 +22,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             for (int x = 0; x < 20; x++)
             {
                 c.agregar(FabricaDeModelosComparables.crearAleatorio(opcion));
-            }         
+            }
         }
 
         public static void imprimir(string value)
@@ -102,8 +103,12 @@ namespace MetodologiaDeProgramacion.Utilidades
         {
             for (int x = 0; x < 20; x++)
             {
-                double monto = GeneradorDeDatosAleatorios.numeroAleatorio(7000);
-                ((Vendedor)c).venta(monto);
+                c.primero();
+                while (!c.fin())
+                {
+                    ((Vendedor)c.actual()).venta(GeneradorDeDatosAleatorios.numeroAleatorio(7000));
+                    c.siguiente();
+                }
             }
         }
     }
