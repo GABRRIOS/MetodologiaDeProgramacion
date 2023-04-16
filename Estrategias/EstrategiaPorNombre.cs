@@ -1,12 +1,13 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Modelos.Comparables;
 
-namespace MetodologiaDeProgramacion.Estrategias.Alumno
+namespace MetodologiaDeProgramacion.Estrategys
 {
     internal class EstrategiaPorNombre : EstrategiaDeComparacion
     {
         public bool sosIgual(Comparable c1, Comparable c2)
         {
-            return ((MetodologiaDeProgramacion.Modelos.Comparables.Alumno)c1).getNombre().Equals(((MetodologiaDeProgramacion.Modelos.Comparables.Alumno)c2).getNombre());
+            return ((Alumno)c1).getNombre().Equals(((Alumno)c2).getNombre());
         }
 
         public bool sosMayor(Comparable c1, Comparable c2)
