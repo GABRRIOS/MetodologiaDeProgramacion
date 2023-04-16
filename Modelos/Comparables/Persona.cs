@@ -1,10 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
@@ -24,14 +18,15 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return this.nombre;
         }
 
-        public int getDni() { 
-        return this.dni;
+        public int getDni()
+        {
+            return this.dni;
         }
 
         public virtual bool sosIgual(Comparable c)
         {
-            return dni == ((Persona)c).getDni();     
-         }
+            return dni == ((Persona)c).getDni();
+        }
 
         public virtual bool sosMenor(Comparable c)
         {

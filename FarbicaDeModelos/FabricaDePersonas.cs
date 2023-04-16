@@ -5,24 +5,20 @@ using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion.FarbicaDeModelos
 {
-    internal class FabricaDeAlumnos : FabricaDeComparables
+    internal class FabricaDePersonas : FabricaDeComparables
     {
         public override Comparable crearAleatorio()
         {
             var nombre = GeneradorDeDatosAleatorios.stringAleatorio(6);
             int dni = GeneradorDeDatosAleatorios.numeroAleatorio(99999999);
-            int legajo = GeneradorDeDatosAleatorios.numeroAleatorio(9999);
-            int promedio = GeneradorDeDatosAleatorios.numeroAleatorio(10);
-            return new Alumno(nombre, dni, legajo, promedio);
+            return new Persona(nombre, dni);
         }
 
         public override Comparable crearPorTeclado()
         {
             var nombre = LectorDeDatos.stringPorTeclado();
             int dni = LectorDeDatos.numeroPorTeclado();
-            int legajo = LectorDeDatos.numeroPorTeclado();
-            int promedio = LectorDeDatos.numeroPorTeclado();
-            return new Alumno(nombre, dni, legajo, promedio);
+            return new Persona(nombre, dni);
         }
     }
 }

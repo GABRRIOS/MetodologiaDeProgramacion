@@ -1,10 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
@@ -22,7 +16,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         }
 
         public double SueldoBasico { get => sueldoBasico; set => sueldoBasico = value; }
-        public double Bonus { get => bonus; set => bonus = value; } 
+        public double Bonus { get => bonus; set => bonus = value; }
 
         public override bool sosMenor(Comparable c)
         {
@@ -57,6 +51,6 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public override string ToString()
         {
             return "Nombre: " + getNombre() + " DNI: " + getDni() + " Sueldo Basico: " + SueldoBasico + " Bonus: " + String.Format("{0:00.0}", bonus);
-        }     
+        }
     }
 }

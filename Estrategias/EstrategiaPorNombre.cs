@@ -1,17 +1,13 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MetodologiaDeProgramacion.Modelos.Comparables;
 
-namespace MetodologiaDeProgramacion.Estrategias.Alumno
+namespace MetodologiaDeProgramacion.Estrategias
 {
     internal class EstrategiaPorNombre : EstrategiaDeComparacion
     {
         public bool sosIgual(Comparable c1, Comparable c2)
         {
-            return ((MetodologiaDeProgramacion.Modelos.Comparables.Alumno)c1).getNombre().Equals(((MetodologiaDeProgramacion.Modelos.Comparables.Alumno)c2).getNombre());
+            return ((Alumno)c1).getNombre().Equals(((Alumno)c2).getNombre());
         }
 
         public bool sosMayor(Comparable c1, Comparable c2)

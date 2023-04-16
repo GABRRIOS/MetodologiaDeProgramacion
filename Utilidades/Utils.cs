@@ -1,17 +1,6 @@
-﻿using MetodologiaDeProgramacion.FarbicaDeModelos;
-using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Coleccionables;
+﻿using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace MetodologiaDeProgramacion.Utilidades
 {
@@ -21,7 +10,7 @@ namespace MetodologiaDeProgramacion.Utilidades
         {
             for (int x = 0; x < 20; x++)
             {
-                c.agregar(FabricaDeModelosComparables.crearAleatorio(opcion));
+                c.agregar(FabricaDeComparables.crearAleatorio(opcion));
             }
         }
 
@@ -37,8 +26,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             imprimir(c.cuantos().ToString());
             imprimir(max.ToString());
             imprimir(min.ToString());
-            if ((max.GetType().Equals(typeof(Persona)))) return;
-            Comparable comparable = FabricaDeModelosComparables.crearPorTeclado(opcion);
+            Comparable comparable = FabricaDeComparables.crearPorTeclado(opcion);
             if (c.contiene(comparable)) imprimir("El elemento leído está en la colección");
             else imprimir("“El elemento leído no está en la colección");
         }
@@ -61,7 +49,7 @@ namespace MetodologiaDeProgramacion.Utilidades
                 var nombre = NOMBRES[rnd.Next(20)];
                 Comparable comparable = new Persona(nombre.ToString(), dni);
                 c.agregar(comparable);
-            }       
+            }
         }
 
         static public void llenarAlumnos(Coleccionable c)
@@ -76,7 +64,7 @@ namespace MetodologiaDeProgramacion.Utilidades
                 int promedio = rnd.Next(10);
                 Comparable comparable = new Alumno(nombre.ToString(), dni, legajo, promedio);
                 c.agregar(comparable);
-            }   
+            }
         }
 
         static public void imprimirElementos(Coleccionable c)

@@ -1,10 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
@@ -21,7 +15,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public Comparable actual()
         {
-            return pila[paginaActual];  
+            return pila[paginaActual];
         }
 
         public void agregar(Comparable c)

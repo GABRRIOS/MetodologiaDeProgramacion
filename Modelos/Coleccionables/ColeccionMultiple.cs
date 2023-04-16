@@ -1,9 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
@@ -30,7 +25,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            return this.c.contiene(c) || this.p.contiene(c); 
+            return this.c.contiene(c) || this.p.contiene(c);
         }
 
         public int cuantos()
@@ -46,7 +41,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         public Comparable maximo()
         {
             Comparable pMax = p.maximo();
-            Comparable cMax = c.maximo();  
+            Comparable cMax = c.maximo();
             if (pMax.sosMayor(cMax)) return pMax;
             return cMax;
         }

@@ -1,9 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
@@ -23,7 +18,8 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             Random rnd = new Random();
             diccionario.Add(new ClaveValor(c, rnd.Next(0, 99)));
         }
-        public void agregar(Comparable c, object v) {
+        public void agregar(Comparable c, object v)
+        {
             foreach (ClaveValor e in this.diccionario)
             {
                 if (c.sosIgual(e.Clave)) e.Valor = v;

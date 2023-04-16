@@ -1,9 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
@@ -35,7 +30,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             {
                 conjunto.Add(c);
             }
-                
+
         }
 
         public bool contiene(Comparable c)
