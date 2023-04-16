@@ -1,5 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Estrategias;
-using MetodologiaDeProgramacion.Estrategias.Alumno;
 using MetodologiaDeProgramacion.Modelos;
 using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;

@@ -1,7 +1,7 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 
-namespace MetodologiaDeProgramacion.Estrategys
+namespace MetodologiaDeProgramacion.Estrategias
 {
     internal class EstrategiaPorLegajo : EstrategiaDeComparacion
     {
