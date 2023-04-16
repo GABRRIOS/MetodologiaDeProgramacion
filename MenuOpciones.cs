@@ -1,15 +1,9 @@
-﻿using MetodologiaDeProgramacion.Estrategias.Alumno;
-using MetodologiaDeProgramacion.Estrategias;
-using MetodologiaDeProgramacion.Modelos.Coleccionables;
+﻿using MetodologiaDeProgramacion.Estrategias;
+using MetodologiaDeProgramacion.Estrategias.Alumno;
 using MetodologiaDeProgramacion.Modelos;
-using MetodologiaDeProgramacion.Utilidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
+using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion
 {

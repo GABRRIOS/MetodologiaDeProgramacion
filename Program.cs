@@ -1,11 +1,4 @@
-﻿using MetodologiaDeProgramacion.Estrategias.Alumno;
-using MetodologiaDeProgramacion.Estrategias;
-using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Coleccionables;
-using MetodologiaDeProgramacion.Utilidades;
-using MetodologiaDeProgramacion.Modelos;
-
-namespace MetodologiaDeProgramacion
+﻿namespace MetodologiaDeProgramacion
 {
     internal class Program
     {

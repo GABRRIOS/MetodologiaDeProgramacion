@@ -2,16 +2,11 @@
 using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.Utilidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos
 {
     internal class Gerente : Observador
-    {      
+    {
         Coleccionable mejores;
 
         public Gerente()
@@ -39,7 +34,7 @@ namespace MetodologiaDeProgramacion.Modelos
                     mejores.agregar(vendedor);
                 }
                 else vendedor.aumentarBonus();
-            }           
+            }
         }
     }
 }

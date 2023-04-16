@@ -1,11 +1,5 @@
 ﻿using MetodologiaDeProgramacion.Estrategias;
 using MetodologiaDeProgramacion.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
@@ -55,7 +49,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         public override string ToString()
         {
-            return "Alumno: " + getNombre() + " Dni: " + getDni()+ " Legajo: " + legajo + " Promedio: " + promedio;
+            return "Alumno: " + getNombre() + " Dni: " + getDni() + " Legajo: " + legajo + " Promedio: " + promedio;
         }
     }
 }
