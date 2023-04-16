@@ -1,5 +1,6 @@
 ﻿using MetodologiaDeProgramacion.Estrategias;
 using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
@@ -9,6 +10,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         int legajo;
         int promedio;
         EstrategiaDeComparacion estrategia;
+        int calificacion;
 
         public Alumno(string nombre, int dni, int legajo, int promedio) : base(nombre, dni)
         {
@@ -32,6 +34,16 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             this.estrategia = estrategia;
         }
 
+        public void setCalificacion(int calificacion)
+        {
+            this.calificacion = calificacion;
+        }
+
+        public int getCalificacion()
+        {
+            return calificacion;
+        }
+
         public override bool sosIgual(Comparable c)
         {
             return estrategia.sosIgual(this, c);
@@ -45,6 +57,16 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public override bool sosMenor(Comparable c)
         {
             return estrategia.sosMenor(this, c);
+        }
+
+        public virtual int reponderPregunta(int opcion)
+        {
+            return GeneradorDeDatosAleatorios.numeroAleatorio(3);
+        }
+
+        public string mostrarCalificacion()
+        {
+            return "Alumno: " + getNombre() + " Calificacion: " + calificacion;
         }
 
         public override string ToString()

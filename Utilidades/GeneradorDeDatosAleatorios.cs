@@ -5,7 +5,7 @@
         public static int numeroAleatorio(int maximo)
         {
             Random rnd = new Random();
-            return rnd.Next(0, maximo);
+            return rnd.Next(1, maximo);
         }
 
         public static string stringAleatorio(int cant)
