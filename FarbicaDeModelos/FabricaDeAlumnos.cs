@@ -1,5 +1,6 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos.Comparables;
+using MetodologiaDeProgramacion.ModelosAbstractos;
 using MetodologiaDeProgramacion.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace MetodologiaDeProgramacion.FarbicaDeModelos
 {
     internal class FabricaDeAlumnos : FabricaDeComparables
     {
-        public Comparable crearAleatorio()
+        public override Comparable crearAleatorio()
         {            
             var nombre = GeneradorDeDatosAleatorios.stringAleatorio(6);
             int dni = GeneradorDeDatosAleatorios.numeroAleatorio(99999999);
@@ -20,7 +21,7 @@ namespace MetodologiaDeProgramacion.FarbicaDeModelos
             return new Alumno(nombre, dni, legajo, promedio);
         }
 
-        public Comparable crearPorTeclado()
+        public override  Comparable crearPorTeclado()
         {          
             var nombre = LectorDeDatos.stringPorTeclado();
             int dni = LectorDeDatos.numeroPorTeclado();

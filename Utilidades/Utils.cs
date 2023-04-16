@@ -21,7 +21,7 @@ namespace MetodologiaDeProgramacion.Utilidades
         {
             for (int x = 0; x < 20; x++)
             {
-                c.agregar(FabricaDeModelosComparables.crearAleatorio(opcion));
+                c.agregar(FabricaDeComparables.crearAleatorio(opcion));
             }
         }
 
@@ -37,8 +37,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             imprimir(c.cuantos().ToString());
             imprimir(max.ToString());
             imprimir(min.ToString());
-            if ((max.GetType().Equals(typeof(Persona)))) return;
-            Comparable comparable = FabricaDeModelosComparables.crearPorTeclado(opcion);
+            Comparable comparable = FabricaDeComparables.crearPorTeclado(opcion);
             if (c.contiene(comparable)) imprimir("El elemento leído está en la colección");
             else imprimir("“El elemento leído no está en la colección");
         }

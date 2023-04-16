@@ -33,41 +33,41 @@ namespace MetodologiaDeProgramacion
                     Utils.informar(coleccionMultiple, 0);
                     break;
                 case 2:
-                    Utils.llenarPersonas(pila);
-                    Utils.llenarPersonas(cola);
-                    Utils.informar(coleccionMultiple, 0);
-                    break;
-                case 3:
                     Utils.llenar(pila, 1);
                     Utils.llenar(cola, 1);
                     Utils.informar(coleccionMultiple, 1);
                     break;
+                case 3:
+                    Utils.llenar(pila, 2);
+                    Utils.llenar(cola, 2);
+                    Utils.informar(coleccionMultiple, 2);
+                    break;
                 case 4:
-                    Utils.llenar(pila, 1);
-                    Utils.llenar(cola, 1);
-                    Utils.llenar(conjunto, 1);
-                    Utils.llenar(diccionario, 1);
+                    Utils.llenar(pila, 2);
+                    Utils.llenar(cola, 2);
+                    Utils.llenar(conjunto, 2);
+                    Utils.llenar(diccionario, 2);
                     Utils.imprimirElementos(pila);
                     Utils.imprimirElementos(cola);
                     Utils.imprimirElementos(conjunto);
                     Utils.imprimirElementos(diccionario);
                     break;
                 case 5:
-                    Utils.llenar(pila, 1);
+                    Utils.llenar(pila, 2);
                     Utils.cambiarEstrategia(pila, new EstrategiaPorNombre());
-                    Utils.informar(pila, 1);
+                    Utils.informar(pila, 2);
 
                     Utils.cambiarEstrategia(pila, new EstrategiaPorLegajo());
-                    Utils.informar(pila, 1);
+                    Utils.informar(pila, 2);
 
                     Utils.cambiarEstrategia(pila, new EstrategiaPorPromedio());
-                    Utils.informar(pila, 1);
+                    Utils.informar(pila, 2);
 
                     Utils.cambiarEstrategia(pila, new EstrategiaPorDni());
-                    Utils.informar(pila, 1);
+                    Utils.informar(pila, 2);
                     break;
                 case 6:
-                    Utils.llenar(cola, 2);
+                    Utils.llenar(cola, 3);
                     Gerente g = new Gerente();
                     while (!cola.fin())
                     {
