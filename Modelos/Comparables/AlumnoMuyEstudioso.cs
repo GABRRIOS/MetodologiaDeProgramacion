@@ -14,7 +14,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         public override int reponderPregunta(int opcion)
         {
-            return base.reponderPregunta(opcion);
+            return 3;
         }
     }
 }

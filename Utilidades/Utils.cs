@@ -1,4 +1,5 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Modelos.Adaptadores;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 
@@ -98,6 +99,17 @@ namespace MetodologiaDeProgramacion.Utilidades
                     c.siguiente();
                 }
             }
+        }
+
+        public static List<Student> goToClass()
+        {
+            List<Student> s = new List<Student> ();
+            for (int x = 0; x < 10; x++)
+            {
+                s.Add(new Student(FabricaDeComparables.crearAleatorio(2)));
+                s.Add(new Student(FabricaDeComparables.crearAleatorio(4)));
+            }
+            return s;
         }
     }
 }

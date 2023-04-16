@@ -1,5 +1,6 @@
 ﻿using MetodologiaDeProgramacion.Estrategias;
 using MetodologiaDeProgramacion.Modelos;
+using MetodologiaDeProgramacion.Modelos.Adaptadores;
 using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.Utilidades;
@@ -69,6 +70,10 @@ namespace MetodologiaDeProgramacion
                     }
                     Utils.jornadaDeVentas(cola);
                     g.cerrar();
+                    break;
+                case 7:
+                    Teacher t = new Teacher(Utils.goToClass());
+                    t.teachingAClass();
                     break;
                 default:
                     break;
