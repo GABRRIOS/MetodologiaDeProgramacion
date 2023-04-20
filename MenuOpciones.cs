@@ -1,6 +1,5 @@
 ﻿using MetodologiaDeProgramacion.Estrategias;
 using MetodologiaDeProgramacion.Modelos;
-using MetodologiaDeProgramacion.Modelos.Adaptadores;
 using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.Utilidades;
@@ -72,7 +71,8 @@ namespace MetodologiaDeProgramacion
                     g.cerrar();
                     break;
                 case 7:
-                    Teacher t = new Teacher(Utils.goToClass());
+                    Teacher t = new Teacher();
+                    t.setStudents(Utils.newListStudents());
                     t.teachingAClass();
                     break;
                 default:

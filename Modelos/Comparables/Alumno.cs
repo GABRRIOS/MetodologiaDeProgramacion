@@ -4,7 +4,7 @@ using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
-    internal class Alumno : Persona
+    internal class Alumno : Persona , Student
     {
 
         int legajo;
@@ -72,6 +72,41 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public override string ToString()
         {
             return "Alumno: " + getNombre() + " Dni: " + getDni() + " Legajo: " + legajo + " Promedio: " + promedio;
+        }
+
+        public string getName()
+        {
+            return getNombre();
+        }
+
+        public int yourAnswerIs(int question)
+        {
+            return reponderPregunta(question);
+        }
+
+        public void setScore(int score)
+        {
+            setCalificacion(score);
+        }
+
+        public string showResult()
+        {
+            return mostrarCalificacion();
+        }
+
+        public bool equals(Student student)
+        {
+            return sosIgual((Alumno)student);
+        }
+
+        public bool lessThan(Student student)
+        {
+            return sosMenor((Alumno)student);
+        }
+
+        public bool greaterThan(Student student)
+        {
+            return sosMayor((Alumno)student);
         }
     }
 }

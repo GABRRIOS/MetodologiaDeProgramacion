@@ -1,5 +1,5 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Adaptadores;
+using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 
@@ -101,14 +101,15 @@ namespace MetodologiaDeProgramacion.Utilidades
             }
         }
 
-        public static List<Student> goToClass()
+        public static Collection newListStudents()
         {
-            List<Student> s = new List<Student> ();
+            Collection s = new ListOfStudent ();
             for (int x = 0; x < 10; x++)
             {
-                s.Add(new Student(FabricaDeComparables.crearAleatorio(2)));
-                s.Add(new Student(FabricaDeComparables.crearAleatorio(4)));
+                s.addStudent((Student)FabricaDeComparables.crearAleatorio(2));
+                s.addStudent((Student)FabricaDeComparables.crearAleatorio(4));
             }
+            s.sort();
             return s;
         }
     }
