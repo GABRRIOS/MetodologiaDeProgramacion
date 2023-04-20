@@ -4,7 +4,7 @@ using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
-    internal class Alumno : Persona , Student
+    internal class Alumno : Persona, Student
     {
 
         int legajo;

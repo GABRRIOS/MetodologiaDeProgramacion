@@ -1,10 +1,5 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos.Comparables;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {

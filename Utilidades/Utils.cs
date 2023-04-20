@@ -103,7 +103,7 @@ namespace MetodologiaDeProgramacion.Utilidades
 
         public static Collection newListStudents()
         {
-            Collection s = new ListOfStudent ();
+            Collection s = new ListOfStudent();
             for (int x = 0; x < 10; x++)
             {
                 s.addStudent((Student)FabricaDeComparables.crearAleatorio(2));
