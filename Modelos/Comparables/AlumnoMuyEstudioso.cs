@@ -6,9 +6,9 @@
         {
         }
 
-        public override int reponderPregunta(int opcion)
+        public override int reponderPregunta(int pregunta)
         {
-            return 3;
+            return pregunta;
         }
 
         public override int yourAnswerIs(int question)

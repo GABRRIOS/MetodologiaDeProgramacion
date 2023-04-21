@@ -59,14 +59,14 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return estrategia.sosMenor(this, c);
         }
 
-        public virtual int reponderPregunta(int opcion)
+        public virtual int reponderPregunta(int pregunta)
         {
             return GeneradorDeDatosAleatorios.numeroAleatorio(3);
         }
 
         public string mostrarCalificacion()
         {
-            return "Alumno: " + getNombre() + " Calificacion: " + calificacion;
+            return getNombre() + " " + calificacion;
         }
 
         public override string ToString()
