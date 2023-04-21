@@ -79,7 +79,7 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return getNombre();
         }
 
-        public int yourAnswerIs(int question)
+        public virtual int yourAnswerIs(int question)
         {
             return reponderPregunta(question);
         }

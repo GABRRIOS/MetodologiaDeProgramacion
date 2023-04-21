@@ -72,7 +72,7 @@ namespace MetodologiaDeProgramacion
                     break;
                 case 7:
                     Teacher t = new Teacher();
-                    t.setStudents(Utils.newListStudents());
+                    Utils.newStudentsToClass(t);
                     t.teachingAClass();
                     break;
                 default:
