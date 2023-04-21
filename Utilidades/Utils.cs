@@ -32,13 +32,13 @@ namespace MetodologiaDeProgramacion.Utilidades
             else imprimir("“El elemento leído no está en la colección");
         }
 
-        private static List<String> NOMBRES = new List<String>{
+        public static String[] NOMBRES = {
             "Noah" ,"Liam" ,"William" ,"Mason" ,
             "James" ,"Benjamin" ,"Jacob" ,
             "Michael" ,"Elijah" ,"Ethan" ,
             "Alexander" ,"Oliver" ,"Daniel" ,
             "Lucas" ,"Matthew" ,"Aiden" ,
-            "Jackson" ,"Logan" ,"David" ,"Joseph" };
+            "Jackson" ,"Logan" ,"David" ,"Joseph" , "Maria"};
 
         public static void llenarPersonas(Coleccionable c)
         {
