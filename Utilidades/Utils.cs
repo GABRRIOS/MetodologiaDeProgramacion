@@ -109,5 +109,20 @@ namespace MetodologiaDeProgramacion.Utilidades
                 t.goToClass((Student)FabricaDeComparables.crearAleatorio(4));
             }
         }
+        public static string stringNumber(int numero)
+        {
+            if (numero == 0) return "(CERO)";
+            if (numero == 1) return "(UNO)";
+            if (numero == 2) return "(DOS)";
+            if (numero == 3) return "(TRES)";
+            if (numero == 4) return "(CUATRO)";
+            if (numero == 5) return "(CINCO)";
+            if (numero == 6) return "(SEIS)";
+            if (numero == 7) return "(SIETE)";
+            if (numero == 8) return "(OCHO)";
+            if (numero == 9) return "(NUEVE)";
+            return "(DIEZ)";
+
+        }
     }
 }

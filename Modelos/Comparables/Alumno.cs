@@ -4,7 +4,7 @@ using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion.Modelos.Comparables
 {
-    internal class Alumno : Persona, Student
+    internal class Alumno : Persona, Student, DecoradorCalificacion
     {
 
         int legajo;
@@ -91,7 +91,9 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
 
         public string showResult()
         {
-            return mostrarCalificacion();
+            DecoradorCalificacion dc = UtilsDecorators.aplicarDecoradoPorNota(this);
+            dc = UtilsDecorators.aplicarDecoradoPorRecuadro(dc);
+            return dc.mostrarCalificacion();
         }
 
         public bool equals(Student student)
