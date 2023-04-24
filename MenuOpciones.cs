@@ -70,6 +70,11 @@ namespace MetodologiaDeProgramacion
                     Utils.jornadaDeVentas(cola);
                     g.cerrar();
                     break;
+                case 7:
+                    Teacher t = new Teacher();
+                    Utils.newStudentsToClass(t);
+                    t.teachingAClass();
+                    break;
                 default:
                     break;
             }

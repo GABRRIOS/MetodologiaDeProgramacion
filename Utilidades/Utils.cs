@@ -1,4 +1,5 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
+using MetodologiaDeProgramacion.Modelos;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 
@@ -31,13 +32,13 @@ namespace MetodologiaDeProgramacion.Utilidades
             else imprimir("“El elemento leído no está en la colección");
         }
 
-        private static List<String> NOMBRES = new List<String>{
+        public static String[] NOMBRES = {
             "Noah" ,"Liam" ,"William" ,"Mason" ,
             "James" ,"Benjamin" ,"Jacob" ,
             "Michael" ,"Elijah" ,"Ethan" ,
             "Alexander" ,"Oliver" ,"Daniel" ,
             "Lucas" ,"Matthew" ,"Aiden" ,
-            "Jackson" ,"Logan" ,"David" ,"Joseph" };
+            "Jackson" ,"Logan" ,"David" ,"Joseph" , "Maria"};
 
         public static void llenarPersonas(Coleccionable c)
         {
@@ -98,6 +99,30 @@ namespace MetodologiaDeProgramacion.Utilidades
                     c.siguiente();
                 }
             }
+        }
+
+        public static void newStudentsToClass(Teacher t)
+        {
+            for (int x = 0; x < 10; x++)
+            {
+                t.goToClass((Student)FabricaDeComparables.crearAleatorio(2));
+                t.goToClass((Student)FabricaDeComparables.crearAleatorio(4));
+            }
+        }
+        public static string stringNumber(int numero)
+        {
+            if (numero == 0) return "(CERO)";
+            if (numero == 1) return "(UNO)";
+            if (numero == 2) return "(DOS)";
+            if (numero == 3) return "(TRES)";
+            if (numero == 4) return "(CUATRO)";
+            if (numero == 5) return "(CINCO)";
+            if (numero == 6) return "(SEIS)";
+            if (numero == 7) return "(SIETE)";
+            if (numero == 8) return "(OCHO)";
+            if (numero == 9) return "(NUEVE)";
+            return "(DIEZ)";
+
         }
     }
 }

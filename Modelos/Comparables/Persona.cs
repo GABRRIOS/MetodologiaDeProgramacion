@@ -23,6 +23,11 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
             return this.dni;
         }
 
+        public void setNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
         public virtual bool sosIgual(Comparable c)
         {
             return dni == ((Persona)c).getDni();

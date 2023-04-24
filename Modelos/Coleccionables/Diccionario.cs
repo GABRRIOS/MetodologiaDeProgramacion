@@ -36,9 +36,9 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         }
         public object? valorDe(Comparable c)
         {
-            foreach (ClaveValor e in this.diccionario)
+            foreach (ClaveValor cv in this.diccionario)
             {
-                if (c.sosIgual(e.Clave)) return e.Valor;
+                if (cv.Clave.sosIgual(c)) return cv.Valor;
             }
             return null;
         }

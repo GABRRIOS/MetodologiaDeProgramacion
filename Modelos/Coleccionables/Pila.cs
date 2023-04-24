@@ -27,7 +27,7 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         {
             foreach (Comparable com in pila)
             {
-                if (c.sosIgual(com)) return true;
+                if (com.sosIgual(c)) return true;
             }
             return false;
         }

@@ -9,7 +9,7 @@ namespace MetodologiaDeProgramacion.FarbicaDeModelos
     {
         public override Comparable crearAleatorio()
         {
-            var nombre = GeneradorDeDatosAleatorios.stringAleatorio(6);
+            var nombre = Utils.NOMBRES.GetValue(GeneradorDeDatosAleatorios.numeroAleatorio(20)) as String;
             int dni = GeneradorDeDatosAleatorios.numeroAleatorio(40999999);
             double sueldoBasico = GeneradorDeDatosAleatorios.numeroAleatorio(99999);
             return new Vendedor(nombre, dni, sueldoBasico);

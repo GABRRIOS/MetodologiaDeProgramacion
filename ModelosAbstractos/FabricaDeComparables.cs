@@ -9,6 +9,7 @@ namespace MetodologiaDeProgramacion.ModelosAbstractos
         const int PERSONA = 1;
         const int ALUMNO = 2;
         const int VENDEDOR = 3;
+        const int ALUMNO_ESTUDIOSO = 4;
 
         static public Comparable crearAleatorio(int valor)
         {
@@ -18,6 +19,7 @@ namespace MetodologiaDeProgramacion.ModelosAbstractos
             else if (valor == PERSONA) fabricaDeComparables = new FabricaDePersonas();
             else if (valor == ALUMNO) fabricaDeComparables = new FabricaDeAlumnos();
             else if (valor == VENDEDOR) fabricaDeComparables = new FabricaDeVendedores();
+            else if (valor == ALUMNO_ESTUDIOSO) fabricaDeComparables = new FabricaDeAlumnoMuyEstudioso();
             else fabricaDeComparables = new FabricaDeNumeros();
             return fabricaDeComparables.crearAleatorio();
         }
@@ -35,6 +37,7 @@ namespace MetodologiaDeProgramacion.ModelosAbstractos
             else if (valor == PERSONA) fabricaDeComparables = new FabricaDePersonas();
             else if (valor == ALUMNO) fabricaDeComparables = new FabricaDeAlumnos();
             else if (valor == VENDEDOR) fabricaDeComparables = new FabricaDeVendedores();
+            else if (valor == ALUMNO_ESTUDIOSO) fabricaDeComparables = new FabricaDeAlumnoMuyEstudioso();
             else fabricaDeComparables = new FabricaDeNumeros();
             return fabricaDeComparables.crearPorTeclado();
         }
