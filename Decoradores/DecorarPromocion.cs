@@ -1,5 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 
 namespace MetodologiaDeProgramacion.Decoradores
@@ -15,8 +14,8 @@ namespace MetodologiaDeProgramacion.Decoradores
         public override string mostrarCalificacion()
         {
             String val = "";
-            if (((Alumno)decorador).getCalificacion() >= 7) val = "(PROMOCION)";
-            else if (((Alumno)decorador).getCalificacion() < 4) val = "(DESAPROBADO)";
+            if (decorador.getCalificacion() >= 7) val = "(PROMOCION)";
+            else if (decorador.getCalificacion() < 4) val = "(DESAPROBADO)";
             else val = "(APROBADO)";
             return base.mostrarCalificacion() + val;
         }

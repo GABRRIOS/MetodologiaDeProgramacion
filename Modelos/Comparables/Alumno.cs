@@ -92,6 +92,9 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public string showResult()
         {
             DecoradorCalificacion dc = UtilsDecorators.aplicarDecoradoPorNota(this);
+
+            dc = UtilsDecorators.aplicarDecoradoPorPromocion(dc);
+            dc = UtilsDecorators.aplicarDecoradoPorLegajo(dc);
             dc = UtilsDecorators.aplicarDecoradoPorRecuadro(dc);
             return dc.mostrarCalificacion();
         }

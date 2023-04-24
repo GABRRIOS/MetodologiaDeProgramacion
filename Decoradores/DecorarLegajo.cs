@@ -1,5 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 
 namespace MetodologiaDeProgramacion.Decoradores
@@ -11,11 +10,11 @@ namespace MetodologiaDeProgramacion.Decoradores
         public DecorarLegajo(DecoradorCalificacion decorador) : base(decorador)
         {
             this.decorador = decorador;
+            decorador.setNombre(decorador.getNombre() + "(" + decorador.getLegajo() + ")");
         }
 
         public override string mostrarCalificacion()
         {
-            ((Alumno)decorador).setNombre(((Alumno)decorador).getNombre() + "(" + ((Alumno)decorador).getLegajo() + ")");
             return base.mostrarCalificacion();
         }
     }

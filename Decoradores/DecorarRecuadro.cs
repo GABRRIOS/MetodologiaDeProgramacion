@@ -13,9 +13,10 @@ namespace MetodologiaDeProgramacion.Decoradores
 
         public override string mostrarCalificacion()
         {
-            return new String('*', base.mostrarCalificacion().Length + 8)
+            int valor = base.mostrarCalificacion().Length + 8;
+            return new String('*', valor)
                 + "\n*   " + base.mostrarCalificacion() + "   *\n"
-                + new String('*', base.mostrarCalificacion().Length + 8);
+                + new String('*', valor);
         }
     }
 }

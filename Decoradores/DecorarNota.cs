@@ -1,5 +1,4 @@
 ﻿using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
 using MetodologiaDeProgramacion.Utilidades;
 
@@ -16,7 +15,7 @@ namespace MetodologiaDeProgramacion.Decoradores
 
         public override string mostrarCalificacion()
         {
-            return base.mostrarCalificacion() + Utils.stringNumber(((Alumno)decorador).getCalificacion());
+            return base.mostrarCalificacion() + Utils.stringNumber(decorador.getCalificacion());
         }
     }
 }

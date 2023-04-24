@@ -35,9 +35,9 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public bool contiene(Comparable c)
         {
-            foreach (Comparable con in conjunto)
+            foreach (Comparable com in conjunto)
             {
-                if (c.sosIgual(con)) return true;
+                if (com.sosIgual(c)) return true;
             }
             return false;
         }
