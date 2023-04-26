@@ -15,6 +15,7 @@ namespace MetodologiaDeProgramacion
             Conjunto conjunto = new Conjunto();
             Diccionario diccionario = new Diccionario();
             ColeccionMultiple coleccionMultiple = new ColeccionMultiple(pila, cola);
+            Aula aula = new Aula();
 
             switch (Convert.ToInt32(Console.ReadLine()))
             {
@@ -74,6 +75,13 @@ namespace MetodologiaDeProgramacion
                     Teacher t = new Teacher();
                     Utils.newStudentsToClass(t);
                     t.teachingAClass();
+                    break;
+                case 8:
+                    pila.setOrdenInicio(null);
+                    pila.setOrdenLlegaAlumno(null);
+                    pila.setOrdenAulaLlena(null);
+                    Utils.llenar(pila, 2);
+                    Utils.llenar(pila, 4);
                     break;
                 default:
                     break;

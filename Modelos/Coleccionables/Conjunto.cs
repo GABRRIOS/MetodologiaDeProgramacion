@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Conjunto : Coleccionable
+    internal class Conjunto : Coleccionable, Iterador, Ordenable
     {
 
         List<Comparable> conjunto;
@@ -80,6 +80,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         public void siguiente()
         {
             this.paginaActual = this.paginaActual + 1;
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
         }
     }
 }

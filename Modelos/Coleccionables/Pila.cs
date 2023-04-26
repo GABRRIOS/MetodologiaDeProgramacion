@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Pila : Coleccionable
+    internal class Pila : Coleccionable, Iterador, Ordenable
     {
         List<Comparable> pila;
         int paginaActual;
@@ -66,6 +66,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         public void primero()
         {
             this.paginaActual = 0;
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        {
+            throw new NotImplementedException();
         }
 
         public void siguiente()

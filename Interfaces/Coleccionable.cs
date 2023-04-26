@@ -1,6 +1,6 @@
 ﻿namespace MetodologiaDeProgramacion.Interfaces
 {
-    internal interface Coleccionable : Iterador
+    internal interface Coleccionable
     {
         int cuantos();
 
