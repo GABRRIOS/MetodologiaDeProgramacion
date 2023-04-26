@@ -67,6 +67,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             this.paginaActual = 0;
         }
 
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        {
+            throw new NotImplementedException();
+        }
+
         public void siguiente()
         {
             this.paginaActual = this.paginaActual + 1;

@@ -59,6 +59,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             throw new NotImplementedException();
         }
 
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        {
+            throw new NotImplementedException();
+        }
+
         public void siguiente()
         {
             throw new NotImplementedException();
