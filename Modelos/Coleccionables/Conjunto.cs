@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Conjunto : Coleccionable
+    internal class Conjunto : Coleccionable, Iterador, Ordenable
     {
 
         List<Comparable> conjunto;

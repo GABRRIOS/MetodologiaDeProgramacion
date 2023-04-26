@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Pila : Coleccionable
+    internal class Pila : Coleccionable, Iterador, Ordenable
     {
         List<Comparable> pila;
         int paginaActual;

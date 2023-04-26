@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Diccionario : Coleccionable
+    internal class Diccionario : Coleccionable, Iterador, Ordenable
     {
         List<ClaveValor> diccionario;
         int paginaActual;

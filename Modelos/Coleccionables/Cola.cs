@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Cola : Coleccionable
+    internal class Cola : Coleccionable, Iterador, Ordenable
     {
         List<Comparable> cola;
         int paginaActual;

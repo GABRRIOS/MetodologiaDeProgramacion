@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class ColeccionMultiple : Coleccionable
+    internal class ColeccionMultiple : Coleccionable, Iterador, Ordenable
     {
 
         Coleccionable p;
