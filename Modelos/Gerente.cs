@@ -7,7 +7,7 @@ namespace MetodologiaDeProgramacion.Modelos
 {
     internal class Gerente : Observador
     {
-        Coleccionable mejores;
+        Cola mejores;
 
         public Gerente()
         {

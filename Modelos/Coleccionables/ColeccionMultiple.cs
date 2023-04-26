@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class ColeccionMultiple : Coleccionable
+    internal class ColeccionMultiple : Coleccionable, Iterador, Ordenable
     {
 
         Coleccionable p;
@@ -55,6 +55,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         }
 
         public void primero()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
         {
             throw new NotImplementedException();
         }

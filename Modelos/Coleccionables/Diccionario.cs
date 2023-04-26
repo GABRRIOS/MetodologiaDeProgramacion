@@ -2,7 +2,7 @@
 
 namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 {
-    internal class Diccionario : Coleccionable
+    internal class Diccionario : Coleccionable, Iterador, Ordenable
     {
         List<ClaveValor> diccionario;
         int paginaActual;
@@ -86,6 +86,21 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         public Comparable actual()
         {
             return diccionario[paginaActual].Clave;
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            throw new NotImplementedException();
         }
     }
 }
