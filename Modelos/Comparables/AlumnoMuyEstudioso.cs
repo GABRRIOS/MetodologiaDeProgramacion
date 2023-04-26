@@ -10,10 +10,5 @@
         {
             return pregunta;
         }
-
-        public override int yourAnswerIs(int question)
-        {
-            return reponderPregunta(question);
-        }
     }
 }

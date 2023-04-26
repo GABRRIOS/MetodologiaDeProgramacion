@@ -1,4 +1,5 @@
-﻿using MetodologiaDeProgramacion.Interfaces;
+﻿using MetodologiaDeProgramacion.Adapter;
+using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
@@ -68,7 +69,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             }
         }
 
-        static public void imprimirElementos(Coleccionable c)
+        static public void imprimirElementos(Iterador c)
         {
             c.primero();
             while (!c.fin())
@@ -78,7 +79,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             }
         }
 
-        static public void cambiarEstrategia(Coleccionable coleccionable, EstrategiaDeComparacion estrategia)
+        static public void cambiarEstrategia(Iterador coleccionable, EstrategiaDeComparacion estrategia)
         {
             coleccionable.primero();
             while (!coleccionable.fin())
@@ -88,7 +89,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             }
         }
 
-        public static void jornadaDeVentas(Coleccionable c)
+        public static void jornadaDeVentas(Iterador c)
         {
             for (int x = 0; x < 20; x++)
             {
@@ -105,8 +106,8 @@ namespace MetodologiaDeProgramacion.Utilidades
         {
             for (int x = 0; x < 10; x++)
             {
-                t.goToClass((Student)FabricaDeComparables.crearAleatorio(2));
-                t.goToClass((Student)FabricaDeComparables.crearAleatorio(4));
+                t.goToClass(new StudentAdapter(FabricaDeComparables.crearAleatorio(2)));
+                t.goToClass(new StudentAdapter(FabricaDeComparables.crearAleatorio(4)));
             }
         }
         public static string stringNumber(int numero)
