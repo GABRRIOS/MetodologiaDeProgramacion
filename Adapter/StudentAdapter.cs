@@ -35,7 +35,6 @@ namespace MetodologiaDeProgramacion.Adapter
         public string showResult()
         {
             DecoradorCalificacion dc = UtilsDecorators.aplicarDecoradoPorNota(((Alumno)alumno));
-            dc = UtilsDecorators.aplicarDecoradoPorLegajo(dc);
             dc = UtilsDecorators.aplicarDecoradoPorPromocion(dc);
             dc = UtilsDecorators.aplicarDecoradoPorLegajo(dc);
             dc = UtilsDecorators.aplicarDecoradoPorRecuadro(dc);
