@@ -13,9 +13,9 @@ namespace MetodologiaDeProgramacion.Adapter
             this.alumno = alumno;
         }
 
-        public Comparable getAlumno() 
-        { 
-        return alumno;
+        public Comparable getAlumno()
+        {
+            return alumno;
         }
         public string getName()
         {

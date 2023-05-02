@@ -3,6 +3,7 @@ using MetodologiaDeProgramacion.Interfaces;
 using MetodologiaDeProgramacion.Modelos;
 using MetodologiaDeProgramacion.Modelos.Comparables;
 using MetodologiaDeProgramacion.ModelosAbstractos;
+using MetodologiaDeProgramacion.Proxy;
 
 namespace MetodologiaDeProgramacion.Utilidades
 {
@@ -33,7 +34,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             else imprimir("“El elemento leído no está en la colección");
         }
 
-        public static String[] NOMBRES = {
+        public static string[] NOMBRES = {
             "Noah" ,"Liam" ,"William" ,"Mason" ,
             "James" ,"Benjamin" ,"Jacob" ,
             "Michael" ,"Elijah" ,"Ethan" ,
@@ -104,10 +105,15 @@ namespace MetodologiaDeProgramacion.Utilidades
 
         public static void newStudentsToClass(Teacher t)
         {
-            for (int x = 0; x < 10; x++)
+            int opcion = 0;
+            for (int x = 0; x < 20; x++)
             {
-                t.goToClass(new StudentAdapter(FabricaDeComparables.crearAleatorio(2)));
-                t.goToClass(new StudentAdapter(FabricaDeComparables.crearAleatorio(4)));
+                if (x >= 10) opcion = 1;
+                var nombre = Utils.NOMBRES.GetValue(GeneradorDeDatosAleatorios.numeroAleatorio(20)) as string;
+                int dni = GeneradorDeDatosAleatorios.numeroAleatorio(99999999);
+                int legajo = GeneradorDeDatosAleatorios.numeroAleatorio(9999);
+                int promedio = GeneradorDeDatosAleatorios.numeroAleatorio(10);
+                t.goToClass(new StudentAdapter(new ProxyAlumno(nombre, dni, legajo, promedio, opcion)));
             }
         }
         public static string stringNumber(int numero)

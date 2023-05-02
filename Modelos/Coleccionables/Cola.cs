@@ -6,6 +6,9 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
     {
         List<Comparable> cola;
         int paginaActual;
+        OrdenEnAula1 ordenAulaLlena;
+        OrdenEnAula1 ordenInicio;
+        OrdenEnAula2 ordenLlegaAlumno;
 
         public Cola()
         {
@@ -21,6 +24,9 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
         public void agregar(Comparable c)
         {
             cola.Add(c);
+            if (ordenInicio != null && cuantos() == 1) ordenInicio.ejecutar();
+            if (ordenLlegaAlumno != null) ordenLlegaAlumno.ejecutar(c);
+            if (ordenAulaLlena != null && cuantos() == 40) ordenAulaLlena.ejecutar();
         }
 
         public bool contiene(Comparable c)
@@ -69,17 +75,17 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
         {
-            throw new NotImplementedException();
+            this.ordenAulaLlena = ordenEnAula1;
         }
 
         public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
         {
-            throw new NotImplementedException();
+            this.ordenInicio = ordenEnAula1;
         }
 
         public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
         {
-            throw new NotImplementedException();
+            this.ordenLlegaAlumno = ordenEnAula2;
         }
 
         public void siguiente()

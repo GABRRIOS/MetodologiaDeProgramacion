@@ -72,6 +72,6 @@ namespace MetodologiaDeProgramacion.Modelos.Comparables
         public override string ToString()
         {
             return "Alumno: " + getNombre() + " Dni: " + getDni() + " Legajo: " + legajo + " Promedio: " + promedio;
-        }  
+        }
     }
 }
