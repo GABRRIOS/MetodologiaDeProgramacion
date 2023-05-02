@@ -109,7 +109,7 @@ namespace MetodologiaDeProgramacion.Utilidades
             for (int x = 0; x < 20; x++)
             {
                 if (x >= 10) opcion = 1;
-                var nombre = Utils.NOMBRES.GetValue(GeneradorDeDatosAleatorios.numeroAleatorio(20)) as string;
+                var nombre = NOMBRES.GetValue(GeneradorDeDatosAleatorios.numeroAleatorio(20)) as string;
                 int dni = GeneradorDeDatosAleatorios.numeroAleatorio(99999999);
                 int legajo = GeneradorDeDatosAleatorios.numeroAleatorio(9999);
                 int promedio = GeneradorDeDatosAleatorios.numeroAleatorio(10);
