@@ -7,6 +7,9 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         List<Comparable> conjunto;
         int paginaActual;
+        OrdenEnAula1 ordenAulaLlena;
+        OrdenEnAula1 ordenInicio;
+        OrdenEnAula2 ordenLlegaAlumno;
 
         public Conjunto()
         {
@@ -29,6 +32,9 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
             if (!contiene(c))
             {
                 conjunto.Add(c);
+                if (ordenInicio != null && cuantos() == 1) ordenInicio.ejecutar();
+                if (ordenLlegaAlumno != null) ordenLlegaAlumno.ejecutar(c);
+                if (ordenAulaLlena != null && cuantos() == 40) ordenAulaLlena.ejecutar();
             }
 
         }
@@ -84,17 +90,17 @@ namespace MetodologiaDeProgramacion.Modelos.Coleccionables
 
         public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
         {
-            throw new NotImplementedException();
+            this.ordenInicio = ordenEnAula1;
         }
 
         public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
         {
-            throw new NotImplementedException();
+            this.ordenLlegaAlumno = ordenEnAula2;
         }
 
         public void setOrdenAulaLlena(OrdenEnAula1 ordenEnAula1)
         {
-            throw new NotImplementedException();
+            this.ordenAulaLlena = ordenEnAula1;
         }
     }
 }

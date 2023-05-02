@@ -1,10 +1,5 @@
-﻿using MetodologiaDeProgramacion.Interfaces;
-using MetodologiaDeProgramacion.Modelos.Comparables;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MetodologiaDeProgramacion.Adapter;
+using MetodologiaDeProgramacion.Interfaces;
 
 namespace MetodologiaDeProgramacion.Modelos
 {
@@ -24,9 +19,9 @@ namespace MetodologiaDeProgramacion.Modelos
             teacher = new Teacher();
         }
 
-        public void nuevoAlumno(Alumno alumno)
+        public void nuevoAlumno(Comparable alumno)
         {
-            teacher.goToClass((Student) alumno);
+            teacher.goToClass(new StudentAdapter(alumno));
         }
 
         public void claseLista()

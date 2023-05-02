@@ -2,6 +2,7 @@
 using MetodologiaDeProgramacion.Modelos;
 using MetodologiaDeProgramacion.Modelos.Coleccionables;
 using MetodologiaDeProgramacion.Modelos.Comparables;
+using MetodologiaDeProgramacion.Ordenes;
 using MetodologiaDeProgramacion.Utilidades;
 
 namespace MetodologiaDeProgramacion
@@ -77,9 +78,9 @@ namespace MetodologiaDeProgramacion
                     t.teachingAClass();
                     break;
                 case 8:
-                    pila.setOrdenInicio(null);
-                    pila.setOrdenLlegaAlumno(null);
-                    pila.setOrdenAulaLlena(null);
+                    pila.setOrdenInicio(new OrdenInicio(aula));
+                    pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+                    pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
                     Utils.llenar(pila, 2);
                     Utils.llenar(pila, 4);
                     break;
